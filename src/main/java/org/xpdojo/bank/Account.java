@@ -22,4 +22,8 @@ public class Account {
             transferTo.deposit(amount);
         }
     };
+
+    public String printSlip() {
+        return "Your balance is ".concat(String.valueOf(10));
+    };
 }

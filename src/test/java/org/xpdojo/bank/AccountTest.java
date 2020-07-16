@@ -46,4 +46,11 @@ public class AccountTest {
         assertThat(account1.balance()).isEqualTo(15);
         assertThat(account1.balance()).isEqualTo(15);
     }
+
+    @Test
+    public void printOutBalanceSlip() {
+        Account account = new Account();
+        account.deposit(10);
+        assertThat(account.printSlip()).isEqualTo("Your balance is 10");
+    }
 }
