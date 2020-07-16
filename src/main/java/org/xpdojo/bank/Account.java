@@ -15,4 +15,11 @@ public class Account {
     public void withdraw(int amount) {
         balance -= amount;
     };
+
+    public void transfer(int amount, Account transferTo) {
+        if (amount <= balance) {
+            balance -= amount;
+            transferTo.deposit(amount);
+        }
+    };
 }

@@ -35,4 +35,15 @@ public class AccountTest {
         account.withdraw(3);
         assertThat(account.balance()).isEqualTo(7);
     }
+
+    @Test
+    public void transfertBetweenAcounts() {
+        Account account1 = new Account();
+        account1.deposit(10);
+        Account account2 = new Account();
+        account2.deposit(20);
+        account2.transfer(5, account1);
+        assertThat(account1.balance()).isEqualTo(15);
+        assertThat(account1.balance()).isEqualTo(15);
+    }
 }
